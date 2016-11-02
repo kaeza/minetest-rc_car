@@ -58,6 +58,7 @@ minetest.register_node("rc_car:car", {
 		type = "fixed",
 		fixed = rc_pixelbox,
 	},
+	node_placement_prediction = "",
 	on_place = function(itemstack, placer, pointed_thing)
 		local obj = minetest.add_entity(pointed_thing.above, "rc_car:car_entity")
 		obj:setyaw(placer:get_look_yaw())
